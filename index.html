@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" href="img/favicon.png" sizes="32x32">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,900' rel='stylesheet' type='text/css'>
+
+    <!-- App Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- SEO -->
+		<meta name="description" content=" Timer for meditation built with Vue.JS">
+    <title>Vue Meditation</title>
+
+    <!-- Open graph -->
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Vue Meditation">
+		<meta property="og:description" content=" Timer for meditation built with Vue.JS">
+		<meta property="og:url" content="http://afonsopacifer.github.io/vue-meditation/">
+		<meta property="og:image" content="http://afonsopacifer.github.io/vue-meditation/img/share.png">
+
+		<!-- Twitter cards -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Vue Meditation">
+		<meta name="twitter:description" content=" Timer for meditation built with Vue.JS">
+		<meta name="twitter:url" content="http://afonsopacifer.github.io/vue-meditation/">
+		<meta name="twitter:image" content="http://afonsopacifer.github.io/vue-meditation/img/share.png">
+
+		<!-- CSS <3 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+
+    <div id="app">
+      <span v-text="time | format"></span>
+      <button v-on:click="start">Start</button>
+      <button v-on:click="pause">Pause</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script type="text/JavaScript" src="js/app.js"></script>
+  </body>
+</html>
