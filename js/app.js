@@ -1,23 +1,24 @@
 let elem = document.querySelector('#timeType');
-var opts = {
+
+const opts = {
   typeSpeed: 100,
   deleteSpeed: 50,
   pauseDelay: 5000,
   loop: true,
   postfix: ''
 };
-malarkey(elem, opts).type('choose a background sound')   .pause().delete()
 
-
+malarkey(elem, opts).type('choose a background sound').pause().delete()
                     .type('meditate for a few minutes').pause().delete()
-.type('relax your mind ;)')   .pause().delete();
+                    .type('relax your mind ;)').pause().delete();
+
 
 Vue.filter('digitalClock', (seconds) => {
     let m = Math.floor(seconds % 3600 / 60);
     let s = Math.floor(seconds % 3600 % 60);
     let timeFormated = (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
     return timeFormated;
-})
+});
 
 let clock;
 const defaultSeconds = 600;
@@ -46,7 +47,7 @@ interstellar.addEventListener('ended', function() {
     this.play();
 }, false);
 
-const app = new Vue({
+new Vue({
 
   el: '#app',
 
@@ -67,10 +68,9 @@ const app = new Vue({
             this.pause();
             this.alarm();
           } else {
-            this.time--
+            this.time--;
           }
-        }
-      , 1000);
+        }, 1000);
       }
     },
     pause: function() {
@@ -110,4 +110,4 @@ const app = new Vue({
     }
   }
 
-})
+});
