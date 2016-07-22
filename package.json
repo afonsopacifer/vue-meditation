@@ -1,0 +1,27 @@
+{
+  "name": "vue-meditation",
+  "description": "Timer for meditation built with Vue.JS",
+  "version": "0.1.0",
+  "author": {
+    "name": "afonsopacifer",
+    "email": "afonsopacifer@live.com"
+  },
+  "bugs": {
+    "url": "https://github.com/afonsopacifer/vue-meditation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afonsopacifer/vue-meditation"
+  },
+  "keywords": ["vuejs","meditation"],
+  "dependencies": {
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/http-server ./app -p 5000",
+    "deploy": "git push origin `git subtree split --prefix app master`:gh-pages --force"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "jshint": "^2.9.2"
+  }
+}

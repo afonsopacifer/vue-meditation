@@ -1,0 +1,10 @@
+{
+  "browser": true,
+  "esnext": true,
+  "undef": true,
+  "unused": true,
+  "eqeqeq": true,
+  "indent": 2,
+  "newcap": true,
+  "curly": true
+}
