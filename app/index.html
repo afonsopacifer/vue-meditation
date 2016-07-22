@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="app">
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="icon" href="img/favicon.png" sizes="32x32">
+    <!-- <link rel="icon" href="img/favicon.png" sizes="32x32"> -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,900' rel='stylesheet' type='text/css'>
 
     <!-- App Manifest -->
@@ -11,7 +12,7 @@
 
     <!-- SEO -->
 		<meta name="description" content=" Timer for meditation built with Vue.JS">
-    <title>Vue Meditation</title>
+    <title>{{time | digitalClock}} | Timer for meditation built with Vue.JS</title>
 
     <!-- Open graph -->
 		<meta property="og:type" content="website">
@@ -34,13 +35,23 @@
   </head>
   <body>
 
-    <div id="app">
-      <span v-text="time | format"></span>
-      <button v-on:click="start">Start</button>
-      <button v-on:click="pause">Pause</button>
-    </div>
+    <input type="number" v-model="time">
+    <span>{{time | digitalClock}}</span>
+    <button v-on:click="start">Start</button>
+    <button v-on:click="pause">Pause</button>
+    <button v-on:click="reset">Reset</button>
+    <br>
+    ambient sound:
+    <select v-model="ambientPlay">
+      <option value="0" selected>none</option>
+      <option value="rain">Rain</option>
+      <option value="relax">Relax</option>
+      <option value="interstellar">Interstellar</option>
+    </select>
+    alarm: <input type="checkbox" v-model="alarmStatus" checked>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
     <script type="text/JavaScript" src="js/app.js"></script>
+
   </body>
 </html>
