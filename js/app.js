@@ -1,3 +1,17 @@
+let elem = document.querySelector('#timeType');
+var opts = {
+  typeSpeed: 100,
+  deleteSpeed: 50,
+  pauseDelay: 5000,
+  loop: true,
+  postfix: ''
+};
+malarkey(elem, opts).type('choose a background sound')   .pause().delete()
+
+
+                    .type('meditate for a few minutes').pause().delete()
+.type('relax your mind ;)')   .pause().delete();
+
 Vue.filter('digitalClock', (seconds) => {
     let m = Math.floor(seconds % 3600 / 60);
     let s = Math.floor(seconds % 3600 % 60);
